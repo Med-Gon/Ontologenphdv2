@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OntologyGen | OWL Preview</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .step-nav {
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+    .step-nav .active {
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    .step-nav span {
+      margin-right: 10px;
+    }
+    pre.owl-box {
+      max-height: 500px;
+      overflow-y: auto;
+      background-color: #f9f9f9;
+      padding: 16px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #007acc;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .download-btn:hover {
+      background-color: #005c99;
+    }
+  </style>
+</head>
+<body class="bg-light">
+<div class="container py-4">
+
+  <div class="step-nav">
+    <span>1. Connect</span>
+    <span>2. Context</span>
+    <span>3. Lattice</span>
+    <span>4. Mapping</span>
+    <span>5. Graph</span>
+    <span class="active">▶ 6. OWL</span>
+  </div>
+
+  <h2 class="mb-3">🦉 Generated OWL File Preview</h2>
+
+  {% if mapping.owl_preview %}
+    <pre class="owl-box">
+{% for line in mapping.owl_preview %}
+{{ line }}
+{% endfor %}
+    </pre>
+  {% else %}
+    <p>No preview available.</p>
+  {% endif %}
+
+  <div class="d-flex justify-content-between mt-4">
+    <a class="btn btn-secondary" href="{% url 'graph' %}">Back</a>
+    <a href="{{ owl_file_url }}" download class="btn btn-success">⬇ Download OWL File</a>
+  </div>
+
+</div>
+</body>
+</html>

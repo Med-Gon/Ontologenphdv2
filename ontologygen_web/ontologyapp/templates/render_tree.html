@@ -1,0 +1,11 @@
+<ul>
+    <li>
+      <span class="class-name">{{ node.name }}</span>
+      {% if node.children %}
+        {% for child in node.children %}
+          {% include "render_tree.html" with node=child %}
+        {% endfor %}
+      {% endif %}
+    </li>
+  </ul>
+  

@@ -1,0 +1,28 @@
+services:
+  web:
+    build: .
+    command: >
+      bash -c "
+        python ontologygen_web/manage.py migrate &&
+        python ontologygen_web/manage.py import_chinook &&
+        python ontologygen_web/manage.py runserver 0.0.0.0:8000
+      "
+    volumes:
+      - .:/app
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+# Optional: python ontologygen_web/manage.py createsuperuser - set password to root

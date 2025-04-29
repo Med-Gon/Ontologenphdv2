@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OntologyGen | Start</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .hero {
+      position: relative;
+      background-image: url("{% static 'images/ontologygen_background.png' %}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 60px 20px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      color: white;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black overlay */
+      z-index: 0;
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #f0f0f0;
+      margin-top: 10px;
+    }
+
+    .connection-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .btn-connect {
+      background-color: #007acc;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      padding: 12px 0;
+      font-size: 16px;
+    }
+
+    .btn-connect:hover {
+      background-color: #005c99;
+      color: white; /* Keep the hover text color white */
+    }
+
+    .alert-collections {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e6ffee;
+      border-left: 5px solid #28a745;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+<div class="container py-5">
+
+  <div class="hero text-center">
+    <h1>OntologyGen</h1>
+    <p>Generate clean, structured OWL ontologies from your MongoDB database in just a few clicks.</p>
+  </div>
+
+  <div class="connection-box">
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="connection_string" class="form-label">MongoDB Connection String</label>
+        <input type="text" class="form-control form-control-lg" name="connection_string" id="connection_string"
+               placeholder="mongodb://mongodb:27020/chinook" value="{{ connection_string|default:'' }}" required>
+      </div>
+      <button type="submit" class="btn btn-connect">▶ Connect to Database</button>
+    </form>
+
+    {% if error %}
+      <div class="alert alert-danger mt-3"><strong>{{ error }}</strong></div>
+    {% endif %}
+
+    {% if connected %}
+      <div class="alert-collections">
+        <h5>✅ Connected Successfully!</h5>
+        <p>The following collections were found in your database:</p>
+        <ul>
+          {% for col in collections %}
+            <li>{{ col }}</li>
+          {% endfor %}
+        </ul>
+        <div class="text-end">
+          <a href="{% url 'context' %}" class="btn btn-success mt-3">▶ Generate Formal Context</a>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OntologyGen | Ontology Graph</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .step-nav {
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+    .step-nav .active {
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    .step-nav span {
+      margin-right: 10px;
+    }
+    .graph-container {
+      background-color: #ffffff;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+<div class="container py-4">
+
+  <div class="step-nav">
+    <span>1. Connect</span>
+    <span>2. Context</span>
+    <span>3. Lattice</span>
+    <span>4. Mapping</span>
+    <span class="active">▶ 5. Graph</span>
+    <span>▶ 6. OWL</span>
+  </div>
+
+  <h2 class="mb-3">🧠 Ontology Class Hierarchy (Graph View)</h2>
+
+  <div class="graph-container">
+    {% if graph_url %}
+      <img src="{{ graph_url }}" alt="Ontology Graph" width="100%">
+    {% else %}
+      <p>No graph available.</p>
+    {% endif %}
+  </div>
+
+  <div class="d-flex justify-content-between mt-4">
+    <a class="btn btn-secondary" href="{% url 'mapping' %}">Back</a>
+    <a class="btn btn-success" href="{% url 'owl' %}">▶ OWL File Syntax</a>
+  </div>
+
+</div>
+</body>
+</html>

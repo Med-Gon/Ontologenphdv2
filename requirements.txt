@@ -1,0 +1,9 @@
+Django>=5.0
+pandas
+numpy
+rdflib
+pymongo
+docker
+concepts
+owlready
+graphviz

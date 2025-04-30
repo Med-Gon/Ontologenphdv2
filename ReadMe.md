@@ -25,4 +25,4 @@ docker compose up -d --build
 Log to see console:
 docker logs web-1 -f --tail 300
 
-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
+This si a test....

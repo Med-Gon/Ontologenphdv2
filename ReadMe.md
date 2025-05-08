@@ -148,7 +148,7 @@ http://localhost:8000
 
 Click the link below to watch a demonstration video:
 
-**Video Link Placeholder** *(Coming Soon)*
+![Video Demonstration](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/Videos/Ontologygen_demenstration_opt.mp4) 
 
 ---
 

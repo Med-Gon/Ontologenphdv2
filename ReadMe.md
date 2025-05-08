@@ -3,7 +3,7 @@
 
 Generate clean, structured OWL ontologies from your MongoDB database in just a few clicks.
 
-![OntologyGen Logo Placeholder](https://github.com/Med-Gon/OntologyGen-phd/assets/ontologygen_logo.png)
+![OntologyGen Logo Placeholder](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/ontologygen_background.png)
 
 **OntologyGen** is a web-based software tool built with Python and Django, designed for the automated generation of OWL ontologies from MongoDB databases using **Formal Concept Analysis (FCA)**. It provides a seamless workflow for extracting structured knowledge from NoSQL databases, simplifying ontology engineering through an interactive web interface.
 
@@ -25,7 +25,7 @@ Generate clean, structured OWL ontologies from your MongoDB database in just a f
 
 ## Software Architecture
 
-![Architecture Diagram Placeholder](https://github.com/Med-Gon/OntologyGen-phd/assets/architecture_diagram.png)
+![Architecture Diagram Placeholder](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/architecture_diagram.png)
 
 The OntologyGen application is structured as a **Django-based web app** with a clean separation between the **backend** (handling FCA, data processing, and ontology generation) and the **frontend** (managing user interactions and data visualization). It uses **MongoDB** as the primary data source and integrates FCA algorithms for concept lattice generation.
 
@@ -158,23 +158,27 @@ Click the link below to watch a demonstration video:
 
 1. **Connect to MongoDB:**  
    Enter your MongoDB connection string or upload a JSON dump file to import data.  
-   *Placeholder for connection screen screenshot.*
+   (https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-2.png)
 
 2. **Generate Formal Context:**  
    Review the automatically generated formal context table.  
-   *Placeholder for context table screenshot.*
+   (https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-3.png)
 
 3. **Create Concept Lattice:**  
    Visualize the relationships between collections and attributes.  
-   *Placeholder for concept lattice screenshot.*
+   (https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-4.png)
 
 4. **Apply Mapping Rules:**  
    Convert the lattice to an OWL ontology structure.  
-   *Placeholder for mapping rules screenshot.*
+   (https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-5.png)
 
-5. **Export Ontology:**  
+5. **Ontology Visualization:**  
+   Generated Ontology Graph that shows the hierarchy and object properties.  
+   (https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-6.png)
+
+6. **Export Ontology:**  
    Download the generated OWL file for further use.  
-   *Placeholder for OWL export screenshot.*
+   (https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-7.png)  
 
 ---
 

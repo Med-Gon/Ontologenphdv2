@@ -157,7 +157,7 @@ Click the link below to watch a demonstration video:
 ### Steps to Use OntologyGen
 
 1. **Connect to MongoDB:**  
-   Enter your MongoDB connection string or upload a JSON dump file to import data.  
+   Enter your MongoDB connection string.  
    ![MongoDB connection](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-2.png)
 
 2. **Generate Formal Context:**  
@@ -188,9 +188,9 @@ We welcome contributions from the community! If you’d like to contribute to **
 
 ### Contributors
 
-- Elmehdi Elguerraoui ([GitHub](https://github.com/Med-Gon))
-- Boutkhoum Omar ([GitHub](https://github.com/username))
-- Hanine Mohamed ([GitHub](https://github.com/username))
+- Elmehdi Elguerraoui ([ORCID](https://orcid.org/0009-0001-0516-1853))
+- Boutkhoum Omar ([ORCID](https://orcid.org/0000-0002-0945-7520))
+- Hanine Mohamed ([ORCID](https://orcid.org/0000-0001-5981-2511))
 
 ---
 
@@ -198,6 +198,6 @@ We welcome contributions from the community! If you’d like to contribute to **
 
 This project is licensed under the **MIT License**. You are free to use, modify, and distribute this software as long as the original license terms are respected.
 
-See the [`LICENSE`](LICENSE) file for details.
+See the [`LICENSE`](https://github.com/Med-Gon/Ontologenphdv2/LICENSE.txt) file for details.
 
 ---

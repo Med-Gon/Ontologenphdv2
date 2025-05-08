@@ -198,6 +198,6 @@ We welcome contributions from the community! If you’d like to contribute to **
 
 This project is licensed under the **MIT License**. You are free to use, modify, and distribute this software as long as the original license terms are respected.
 
-See the [`LICENSE`](https://github.com/Med-Gon/Ontologenphdv2/LICENSE.txt) file for details.
+See the [`LICENSE`](https://github.com/Med-Gon/Ontologenphdv2/main/LICENSE.txt) file for details.
 
 ---

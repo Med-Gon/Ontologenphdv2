@@ -147,12 +147,7 @@ http://localhost:8000
 ## Video Demonstration
 
 Click the link below to watch a demonstration video:
-
-<video width="100%" controls>
-  <source src="https://github.com/Med-Gon/Ontologenphdv2/raw/main/ontologygen_web/static/Videos/Ontologygen_demenstration_opt.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
+https://github.com/user-attachments/assets/e62edd6c-0dd4-48ba-ae25-9bdbf094ea39
 ---
 
 ## Utilization

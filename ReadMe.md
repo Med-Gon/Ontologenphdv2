@@ -25,7 +25,7 @@ Generate clean, structured OWL ontologies from your MongoDB database in just a f
 
 ## Software Architecture
 
-![Architecture Diagram](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/architecture_diagram.png)
+![Architecture Diagram](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/architecture_diagram.jpg)
 
 The OntologyGen application is structured as a **Django-based web app** with a clean separation between the **backend** (handling FCA, data processing, and ontology generation) and the **frontend** (managing user interactions and data visualization). It uses **MongoDB** as the primary data source and integrates FCA algorithms for concept lattice generation.
 
@@ -166,11 +166,11 @@ Click the link below to watch a demonstration video:
 
 3. **Create Concept Lattice:**  
    Visualize the relationships between collections and attributes.  
-   ![Concept Lattice](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-4.png)
+   ![Concept Lattice](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-4.jpg)
 
 4. **Apply Mapping Rules:**  
    Convert the lattice to an OWL ontology structure.  
-   ![Mapping Rules](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-5.png)
+   ![Mapping Rules](https://github.com/Med-Gon/Ontologenphdv2/blob/main/ontologygen_web/static/images/Figures/OntologyGen-5.jpg)
 
 5. **Ontology Visualization:**  
    Generated Ontology Graph that shows the hierarchy and object properties.  

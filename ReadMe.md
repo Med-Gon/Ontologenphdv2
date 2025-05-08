@@ -149,7 +149,7 @@ http://localhost:8000
 Click the link below to watch a demonstration video:
 
 <video width="100%" controls>
-  <source src="https://github.com/Med-Gon/Ontologenphdv2/raw/refs/heads/main/ontologygen_web/static/Videos/Ontologygen_demenstration_opt.mp4" type="video/mp4">
+  <source src="https://github.com/Med-Gon/Ontologenphdv2/raw/main/ontologygen_web/static/Videos/Ontologygen_demenstration_opt.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
